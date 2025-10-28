@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --black-color: #2E3640;
+  --dark-black: #151828;
+  --blue: #2665FE;
+  --blue2: #69BEFD;
+  --text: #4A627B;
+  /* --text2: #1D3B74;
+  --text3: #1D3B5A; */
+
+  --text1 : #90BA92;
+  --text2: #B4FFA6;
+  --text3 :#004607;
+  --text4 : #199C38;
+  --text5 : #039b12;
+  --text6 : #0cf723;
+  --yellow: #FFD361;
+  --yellow-light: #f0d592;
+  --gray: #797B7E;
+  --black-dark: #000000;
+  --white: #FFFFFF;
+  --gray-text: #d4d4d4;
+
+  --background-color1: #F3F6FD; /* DO NOT change */
+  --background-color2: #E8F5E9; /* Light Mint Green */
+  --background-color3: #D0F0C0; /* Pale Pastel Green */
+  --background-color4: #C8E6C9; /* Soft Leafy Green */
+
+  --background-color5: #DAE4FC;
+  --background-color6: #DAE4FD;
+
+  --background-color-11: #003009;
+  --background-color-12 : #5DC269;
+  --background-color-14 : #209b2e;
+  --background-color-13 : #231E18;
+  --background-color-16 : #E6F1E4;
+  --background-color-15 : #004401;
+  --background-color-17 : #BEDFB8;
+  --background-color-18 : #D6E1E9;
+
+  /* Premium Green Theme */
+  --green-text: #2F4F4F;        /* Dark Slate Green (text) */
+  --green-text-light: #4B7054;  /* Soft Muted Green for text */
+
+  --green-heading: #1B5E20;     /* Deep Forest Green */
+  --green-heading-light: #2E7D32; /* Lush Green for headings */
+
+  --hover-green: #A5D6A7;       /* Light Green for hover */
+  --hover-green-dark: #81C784;  /* Rich Hover Green */
+}
+
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}

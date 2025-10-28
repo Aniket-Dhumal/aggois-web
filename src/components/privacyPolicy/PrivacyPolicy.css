@@ -1,0 +1,172 @@
+/* Base Styles */
+.privacy-policy-container {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.parallax-section {
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.parallax-section h1 {
+  color: white;
+  font-size: 3rem;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5); */
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.parallax1 {
+background: 
+  linear-gradient(
+    to bottom, 
+    rgba(0, 6, 2, 0.5) 0%,
+    rgba(0, 36, 6, 0.7) 100%
+  ), 
+  url('../../assets/images/privacy-policy7.jpg');
+background-size: cover;  /* Changed from 'cover' to 'contain' */
+background-position: center ;
+background-repeat: no-repeat;
+height: 50vh;
+width: 100%;
+
+}
+
+/* .parallax2 {
+  background-image: url('../../assets/images/privacy-policy2.jpg');
+  height: 70vh;
+}
+
+.parallax3 {
+  background-image: url('../../assets/images/privacy-policy4.jpg');
+  height: 70vh;
+} */
+
+.text-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #34495e;
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .parallax-section h1 {
+    font-size: 2.5rem;
+    padding: 15px 30px;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+  }
+  
+  .text-section {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+    height: 80vh;
+  }
+  
+  .parallax-section h1 {
+    font-size: 2rem;
+    padding: 10px 20px;
+  }
+  
+  h2 {
+    font-size: 1.6rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .text-section {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .parallax-section {
+    height: 60vh;
+  }
+  
+  .parallax-section h1 {
+    font-size: 1.5rem;
+    padding: 8px 16px;
+  }
+  
+  h2 {
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  .text-section {
+    padding: 30px 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .parallax-section {
+    display: none;
+  }
+  
+  .text-section {
+    padding: 20px;
+    background: none;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+  
+  p {
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,103 @@
+
+#homebg {
+  width: 100% !important;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.homebg-content {
+  text-align: center;
+  color: var(--text3);
+  padding: 20px;
+  max-width: 800px;
+  z-index: 2;
+}
+
+.homebg-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+   animation: slideUp 0.8s ease-out 0.3s forwards; /* another 0.3s later */
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.homebg-text {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  animation: slideUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+  transform: translateY(40px);
+  color: var(--white);
+  
+  /* Black box with shadow and rounded corners */
+  background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black */
+  padding: 1.5rem 1.2rem;
+  border-radius: 12px; /* Adjust this value for more/less rounding */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  
+  /* Optional enhancements */
+  backdrop-filter: blur(5px); /* For frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+.homebg-findOut-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: slideUp 0.8s ease-out 0.3s forwards; /* another 0.3s later */
+  opacity: 0;
+  transform: translateY(40px);
+
+}
+
+.homebg-findOut-btn:hover {
+  background-color: #45a049;
+}
+
+.trackter-img{
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    height: 200px;
+    width: 200px !important;
+ animation: drive 10s infinite ease-in-out;
+    animation-delay: 0s; 
+}
+
+@keyframes drive {
+     from{transform: translateX(-100%)}
+    to{transform: translateX(130vw);}
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .homebg-title {
+    font-size: 2rem;
+  }
+  
+  .homebg-text {
+    font-size: 1.2rem;
+  }
+}

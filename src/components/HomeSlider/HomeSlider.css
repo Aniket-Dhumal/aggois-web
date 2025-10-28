@@ -1,0 +1,304 @@
+#homeSlider {
+    width: 100%;
+    height: auto;
+    padding: 60px 0;
+    position: relative;
+    background-color: var(--background-color-16);
+}
+
+.swiper-container {
+    width: 100%;
+    position: relative;
+    margin-bottom: 40px;
+     animation: SlideAppear linear;
+     animation-timeline: view();
+     animation-range: entry 0 cover 40% ;
+}
+
+.homeslide {
+    width: 80%;
+    height: 60vh;
+    background: 
+        /* Gradient overlay - top to bottom */
+        linear-gradient(
+            to bottom, 
+            rgba(0, 36, 6, 0.9) 0%,   /* #002406 with 90% opacity */
+            rgba(0, 6, 2, 0.8) 100%      /* #000602 with 80% opacity */
+        ),
+        /* Original leaf background */
+        url('../../assets/images/grassBg.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    padding: 40px 50px;
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+   
+}
+
+.homeSlide-heading {
+    font-weight: 600;
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.homeSlide-heading>span {
+    color: var(--text5);
+}
+
+.homeSlider-desc {
+    font-size: 22px;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: var(--white);
+}
+
+.homeSlider-name {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    position: absolute;
+    bottom: 60px;
+    left: 50px;
+    color: var(--text2);
+}
+
+.MainWallet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.try-mainwallet-btn {
+    height: 70px;
+    width: 350px;
+    background-color: var(--background-color-14);
+    color: var(--white);
+    border: none;
+    outline: none;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.try-mainwallet-btn:hover {
+    background-color: var(--background-color-12);
+    transform: translateY(-3px);
+}
+
+.all-mainwallet {
+    color: var(--text5);
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: var(--background-color-14);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.swiper-button-prev {
+    left: 5%;
+}
+
+.swiper-button-next {
+    right: 5%;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: var(--background-color-12);
+    transform: scale(1.1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 24px;
+    color: white;
+}
+
+
+@keyframes SlideAppear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+    transform: translateX(-600px);
+    /* clip-path: inset(100% 100% 0 0); */
+    /* filter: blur(5px) contrast(0.5) hue-rotate(90deg); */
+    /* transform: perspective(500px) rotate3d(1, 0.5, 0, 60deg);  */
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0px);
+    /* clip-path: inset(0 0 0 0); */
+    /* filter: blur(0) contrast(1) hue-rotate(0); */
+    /* transform: perspective(500px) rotate3d(0, 0, 0, 0); */
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .homeslide {
+        width: 85%;
+        height: 55vh;
+    }
+
+    .swiper-button-prev {
+        left: 3%;
+    }
+
+    .swiper-button-next {
+        right: 3%;
+    }
+}
+
+@media (max-width: 992px) {
+    .homeslide {
+        width: 90%;
+        height: 50vh;
+        padding: 30px 40px;
+    }
+
+    .homeSlide-heading {
+        font-size: 32px;
+    }
+
+    .homeSlider-desc {
+        font-size: 20px;
+    }
+
+    .homeSlider-name {
+        font-size: 22px;
+    }
+
+    .try-mainwallet-btn {
+        height: 60px;
+        width: 300px;
+        font-size: 24px;
+    }
+
+    .all-mainwallet {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .homeslide {
+        width: 95%;
+        height: 45vh;
+        padding: 25px 30px;
+    }
+
+    .homeSlide-heading {
+        font-size: 28px;
+    }
+
+    .homeSlider-desc {
+        font-size: 18px;
+    }
+
+    .homeSlider-name {
+        font-size: 20px;
+        bottom: 40px;
+        left: 30px;
+    }
+
+    .try-mainwallet-btn {
+        height: 50px;
+        width: 250px;
+        font-size: 20px;
+    }
+
+    .all-mainwallet {
+        font-size: 18px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+    }
+
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #homeSlider {
+        padding: 40px 0;
+    }
+
+    .homeslide {
+        width: 100%;
+        height: 40vh;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .homeSlide-heading {
+        font-size: 24px;
+    }
+
+    .homeSlider-desc {
+        font-size: 16px;
+    }
+
+    .homeSlider-name {
+        font-size: 18px;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .MainWallet {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .try-mainwallet-btn {
+        width: 100%;
+        max-width: 250px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
+}

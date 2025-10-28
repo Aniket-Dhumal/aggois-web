@@ -1,0 +1,159 @@
+/* Base styles for AboutUsBg component */
+#AboutUsBg {
+  height: 50vh !important;
+  /* min-height: 400px; Optional: Set a minimum height for better visibility */
+  background: 
+    linear-gradient(
+      to bottom, 
+      rgba(0, 6, 2, 0.4) 0%,
+      rgba(0, 36, 6, 0.6) 100%
+    ),
+    url("../../assets/images/farmBgImg1.jpg");
+  background-size: cover;
+  background-position: center center; /* Ensures image stays centered */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Creates parallax effect */
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+/* Heading styles with animated underline */
+.aboutUsBg-heading {
+  position: relative;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--white);
+  width: fit-content;
+}
+/* 
+.aboutUsBg-heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  height: 3px;
+  width: 0;
+  background-color: var(--background-color-12);
+  animation: underlineSlide 3s ease-out 0.3s infinite;
+} */
+
+/* Animation for the underline effect */
+@keyframes underlineSlide {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Responsive styles for different screen sizes */
+
+/* For Mobile Devices (320px - 480px) */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #AboutUsBg {
+    height: 30vh;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 28px;
+  }
+  
+  .aboutUsBg-heading::after {
+    height: 2px;
+    bottom: -4px;
+  }
+}
+
+/* For Small Tabs Devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  #AboutUsBg {
+    height: 35vh;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 32px;
+  }
+  
+  .aboutUsBg-heading::after {
+    height: 2.5px;
+    bottom: -5px;
+  }
+}
+
+/* For Medium Tabs Devices (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  #AboutUsBg {
+    height: 38vh;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 36px;
+  }
+}
+
+/* For Large Tabs & Small Laptops (1025px - 1200px) */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  #AboutUsBg {
+    height: 40vh;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 40px;
+  }
+}
+
+/* Current base styles already cover 1201px - 1366px */
+
+/* For Medium Laptops/Desktops (1367px - 1600px) */
+@media screen and (min-width: 1367px) and (max-width: 1600px) {
+  #AboutUsBg {
+    height: 45vh;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 46px;
+  }
+}
+
+/* For Large Laptops/Desktops (1601px - 1920px) */
+@media screen and (min-width: 1601px) and (max-width: 1920px) {
+  #AboutUsBg {
+    height: 50vh;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 52px;
+  }
+  
+  .aboutUsBg-heading::after {
+    height: 4px;
+    bottom: -8px;
+  }
+}
+
+/* For Ultra Wide Devices (1921px - 2560px) */
+@media (min-width: 1921px) and (max-width: 2560px) {
+  #AboutUsBg {
+    height: 55vh;
+  }
+  
+  .aboutUsBg-heading {
+    font-size: 58px;
+  }
+  
+  .aboutUsBg-heading::after {
+    height: 5px;
+    bottom: -10px;
+  }
+}

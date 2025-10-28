@@ -1,0 +1,38 @@
+#ContactUsBg {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 42px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+#ContactUsBg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/images/contactUsBgImg13.jpg') center /cover no-repeat;
+    z-index: -2;
+}
+
+#ContactUsBg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom, 
+        rgba(0, 6, 2, 0.5) 0%,
+        rgba(0, 36, 6, 0.7) 100%
+    );
+    z-index: -1;
+}

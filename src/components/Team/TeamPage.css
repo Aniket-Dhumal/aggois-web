@@ -1,0 +1,123 @@
+#TeamPage {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-heading {
+    text-align: center;
+    padding-left: 30px;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text3);
+    margin-bottom: 20px;
+}
+
+.Teams {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 20px 40px; /* vertical and horizontal spacing */
+}
+
+.team-member {
+    flex: 0 1 calc(25% - 40px); /* For 4 per row max */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Force last two items (5 and 6) to be centered on a new row */
+.team-member:nth-child(n+5) {
+    flex: 0 1 calc(20% - 40px); /* Shrink to 20% to center two items */
+}
+
+.team-img-container {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--background-color-15);
+}
+
+.team-img-div {
+    height: 100%;
+    width: 100%;
+}
+
+.team-img-div img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.linkedin-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(10, 102, 194, 0.8), rgba(10, 102, 194, 0.4));
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.team-img-container:hover .linkedin-overlay {
+    height: 100%;
+}
+
+.linkedin-icon {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.linkedin-icon:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+/* Default fonts for larger screens */
+.team-name {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black-color);
+    margin-top: 12px;
+}
+
+.team-profession {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .team-member {
+        flex: 0 1 calc(33.333% - 40px); /* 3 per row */
+    }
+}
+
+@media (max-width: 900px) {
+    .team-member {
+        flex: 0 1 calc(50% - 40px); /* 2 per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .team-member {
+        flex: 0 1 calc(100% - 40px); /* 1 per row */
+    }
+}
